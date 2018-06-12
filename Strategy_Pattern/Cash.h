@@ -66,27 +66,59 @@ private:
 	double mRebate;
 };
 
-//折扣工厂
-class CashFactory
+////折扣工厂
+//class CashFactory
+//{
+//public:
+//	CashSuper * GetCashAccept(CashType cashtype, double * parameter)
+//	{
+//		switch (cashtype)
+//		{
+//		case CT_NORMAL:
+//			return new CashNormal();
+//			break;
+//		case CT_RETURN:
+//			return new CashReturn(parameter[0], parameter[1]);
+//			break;
+//		case CT_REBATE:
+//			return new CashRebate(parameter[0]);
+//			break;
+//		default:
+//			return nullptr;
+//			break;
+//		}
+//	}
+//private:
+//};
+
+//策略模式
+class CashContext
 {
 public:
-	CashSuper * GetCashAccept(CashType cashtype, double * parameter)
+	CashContext(CashType cashtype, double * parameter)
 	{
 		switch (cashtype)
 		{
 		case CT_NORMAL:
-			return new CashNormal();
+			mCashSuper = new CashNormal();
 			break;
 		case CT_RETURN:
-			return new CashReturn(parameter[0], parameter[1]);
+			mCashSuper = new CashReturn(parameter[0], parameter[1]);
 			break;
 		case CT_REBATE:
-			return new CashRebate(parameter[0]);
+			mCashSuper = new CashRebate(parameter[0]);
 			break;
 		default:
-			return nullptr;
+			mCashSuper = nullptr;
 			break;
 		}
 	}
+
+	double GetResult(double money)
+	{
+		return mCashSuper->AcceptCash(money);
+	}
+
 private:
+	CashSuper * mCashSuper;
 };

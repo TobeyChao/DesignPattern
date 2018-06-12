@@ -5,7 +5,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	CashFactory * pCashFactory = new CashFactory();
+	
 
 	Market * pMarket = new Market();
 
@@ -13,7 +13,8 @@ int main(int argc, char* argv[])
 	double param[] = { 0.6 };
 
 	//ÆôÓÃÕÛ¿Û
-	pMarket->UpdateAccept(pCashFactory->GetCashAccept(CT_REBATE, param));
+	CashContext * pCashContext = new CashContext(CT_REBATE, param);
+	pMarket->AcceptContext(pCashContext);
 
 	pMarket->AddItem(10.5, 3);
 	pMarket->AddItem(5, 10);

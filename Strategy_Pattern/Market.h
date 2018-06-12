@@ -8,13 +8,13 @@ class Market
 public:
 	Market()
 	{
-		mCashAccept = new CashNormal();
+		mCashContext = new CashContext(CT_NORMAL, nullptr);
 		mText.push_back(std::wstring(L"----------------------------------------"));
 		mPrice = 0.0;
 	}
 	void AddItem(const double price, const double number)
 	{
-		double post = mCashAccept->AcceptCash(price * number);
+		double post = mCashContext->GetResult(price * number);
 		mPrice += post;
 
 		std::wstring text = L"µ¥¼Û:" + std::to_wstring(price) +
@@ -32,13 +32,12 @@ public:
 	{
 		return mText;
 	}
-
-	void UpdateAccept(CashSuper * cashAccept)
+	void AcceptContext(CashContext * _CashContext)
 	{
-		mCashAccept = cashAccept;
+		mCashContext = _CashContext;
 	}
 private:
 	double mPrice;
 	std::vector<std::wstring> mText;
-	CashSuper * mCashAccept;
+	CashContext * mCashContext;
 };

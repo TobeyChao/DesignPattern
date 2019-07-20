@@ -61,19 +61,14 @@ public:
 		{
 		case '+':
 			return new OperationAdd();
-			break;
 		case '-':
 			return new OperationSub();
-			break;
 		case '*':
 			return new OperationMul();
-			break;
 		case '/':
 			return new OperationDiv();
-			break;
 		default:
 			return nullptr;
-			break;
 		}
 	}
 };

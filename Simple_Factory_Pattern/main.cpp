@@ -17,9 +17,7 @@ int main(int argc, char* argv[])
 	cout << "Input Operation." << endl;
 	cin >> operate;
 
-	OperateFactory * pOperateFactory = new OperateFactory();
-
-	Operation * op = pOperateFactory->GetOperation(operate);
+	Operation * op = OperateFactory::GetOperation(operate);
 
 	if (op)
 	{
@@ -32,7 +30,7 @@ int main(int argc, char* argv[])
 	{
 		cout << "Error:" << endl;
 	}
-
+	delete op;
 	system("pause");
 	return 0;
 }

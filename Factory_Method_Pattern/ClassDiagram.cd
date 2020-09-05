@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Product">
+    <Position X="6" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Product.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConcreteProduct">
+    <Position X="6" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Product.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Factory">
+    <Position X="3" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAIAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConcreteFactory">
+    <Position X="3" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Factory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

@@ -55,7 +55,7 @@ public:
 class OperateFactory
 {
 public:
-	Operation * GetOperation(const char op)
+	static Operation * GetOperation(const char op)
 	{
 		switch (op)
 		{

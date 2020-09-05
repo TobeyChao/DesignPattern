@@ -11,5 +11,5 @@ int main(int argc, char* argv[])
 
 	cout << pAnotherBoy->GiveFlower() << endl;
 
-	system("pause");
+	return 0;
 }

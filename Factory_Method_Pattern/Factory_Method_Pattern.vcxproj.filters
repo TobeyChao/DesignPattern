@@ -18,10 +18,22 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Product.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Person.h">
+    <ClInclude Include="Product.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Factory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

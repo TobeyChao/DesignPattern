@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6cf28717-669a-42f2-aef3-6d92442d8a1e}</ProjectGuid>
-    <RootNamespace>SimpleFactoryPattern</RootNamespace>
+    <ProjectGuid>{559af573-2b3c-4dcf-a623-48ebdb08d99a}</ProjectGuid>
+    <RootNamespace>FactoryMethodPattern</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,10 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Factory.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Product.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Operation.h" />
+    <ClInclude Include="Factory.h" />
+    <ClInclude Include="Product.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

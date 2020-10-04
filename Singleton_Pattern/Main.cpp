@@ -1,24 +1,45 @@
 #include "Singleton.h"
 #include "TSingleton.h"
 #include <iostream>
-class MyClass : public TSingleton<MyClass>
+class Base
 {
 public:
-	void ShowDesc()
+	Base()
 	{
-		std::cout << "创建单例成功";
+	}
+
+	~Base()
+	{
+	}
+
+	virtual void ShowDesc()
+	{
+		std::cout << "Base";
+	}
+private:
+
+};
+
+class MyClass : public Base, public TSingleton<MyClass>
+{
+public:
+	virtual void ShowDesc() override
+	{
+		std::cout << "MyClass" << std::endl;
 	}
 };
 
 
 int main(int argc, char* argv[])
 {
-	Singleton* instance = Singleton::GetInstance();
-	instance->Print();
+	//Singleton* instance = Singleton::GetInstance();
+	//instance->Print();
 
-	SingletonStarve* instance2 = SingletonStarve::GetInstance();
-
+	//SingletonStarve* instance2 = SingletonStarve::GetInstance();
 	MyClass* myClass = new MyClass();
+
+	Base* base = myClass;
+	base->ShowDesc();
 	//MyClass* myClass2 = new MyClass(); //报错
 	MyClass::GetInstance().ShowDesc();
 	return 0;

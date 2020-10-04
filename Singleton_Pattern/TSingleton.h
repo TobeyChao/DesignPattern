@@ -7,7 +7,12 @@ public:
 	TSingleton()
 	{
 		assert(!mSingleton);
-		mSingleton = static_cast<T*>(this);
+		size_t offset = (size_t)(T*)1 - (size_t)(TSingleton<T>*)(T*)1;
+		mSingleton = (T*)((size_t)this + offset); // 内存地址偏移正确
+
+		//mSingleton = (T*)this; // 内存地址和上面的相同
+
+		//mSingleton = reinterpret_cast<T*>(this); // 内存地址不对
 	}
 
 	virtual ~TSingleton()

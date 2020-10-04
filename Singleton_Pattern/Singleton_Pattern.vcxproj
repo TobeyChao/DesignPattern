@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h" />
+    <ClInclude Include="TSingleton.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
